@@ -8,17 +8,18 @@ const apiProxy = createProxyMiddleware({
     target: 'https://lime-wealth-953247.framer.app', // Replace with your target domain
     changeOrigin: true,
     pathRewrite: {
+        '^/api': '/', // Adjust this if you want to change the route structure
     },
     onProxyReq: (proxyReq, req, res) => {
-        // You can modify the request here if needed
+        // Modify the request here if needed
     },
     onProxyRes: (proxyRes, req, res) => {
-        // You can modify the response here if needed
+        // Modify the response here if needed
     }
 });
 
-// Use the proxy for routes starting with /proxy
-app.use('/', apiProxy);
+// Use the proxy for routes starting with /api
+app.use('/api', apiProxy); // Proxy all requests starting with /api
 
 // Start the server
 const PORT = 3000;
