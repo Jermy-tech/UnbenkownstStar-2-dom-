@@ -11,16 +11,10 @@ const apiProxy = createProxyMiddleware({
         '^/proxy': '', // Remove '/proxy' from the request path
     },
     onProxyReq: (proxyReq, req, res) => {
-        // Add custom headers here
-        proxyReq.setHeader('X-Custom-Header', 'YourValue'); // Add your custom header
-        proxyReq.setHeader('Authorization', 'Bearer YOUR_TOKEN'); // Example of adding an Authorization header
-
-        // You can log headers if you want to see them
-        console.log('Request Headers:', req.headers);
+        // You can modify the request here if needed
     },
     onProxyRes: (proxyRes, req, res) => {
-        // Modify the response if needed
-        console.log('Response Headers:', proxyRes.headers);
+        // You can modify the response here if needed
     }
 });
 
