@@ -4,7 +4,7 @@
     "http-proxy-middleware": "^3.0.3"
   },
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   }
 }
