@@ -5,7 +5,7 @@ const app = express();
 
 // Configure the proxy
 const apiProxy = createProxyMiddleware({
-    target: 'https://lime-wealth-953247.framer.app', // Replace with your target domain
+    target: 'https://static-slides-288062.framer.app/', // Replace with your target domain
     changeOrigin: true,
     pathRewrite: {},
     
