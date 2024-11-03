@@ -4,17 +4,14 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
-
 // Route for root.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'root.html'));
+    res.sendFile(path.join(__dirname, 'root.html'));
 });
 
 // Route for onboarding.html
 app.get('/onboarding', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'onboarding.html'));
+    res.sendFile(path.join(__dirname, 'onboarding.html'));
 });
 
 // Start the server
